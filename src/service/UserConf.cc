@@ -187,7 +187,7 @@ void UserConf::autodetectLocalInterfaceIPAddress(void)
     char cmd[MEDIUMBUF];
     string imp_str;
 
-    snprintf(cmd, MEDIUMBUF, "ifconfig %s | grep \"inet addr\" | cut -b 21- | awk '{print $1}'",
+    snprintf(cmd, MEDIUMBUF, "ifconfig %s |awk -F ' *|:' '/inet /{print $3}'",
              runcfg.net_iface_name);
 
     LOG_ALL("detecting interface %s ip address with [%s]", runcfg.net_iface_name, cmd);

@@ -25,23 +25,19 @@ and you could check the exactly installed file by
     cat install_manifest.txt
 
 # Suggested setup, for configure your network capabilities
-    sniffjoke-autotest -l name_of_your_location 
+    sniffjoke-autotest -l name_of_your_location e.g. office
 
-since you have ran    the "autotest" in this network location (office, home, lab, etc...) you will invoke sniffjoke with:
-
-    sniffjoke --location name_of_your_location
-    sniffjokectl --stat
-    sniffjokectl --start
-    sniffjokectl --help
-    [...]
-
+# Edited. Just run with
+    sudo sniffjoke --location generic --user YOURUSERNAME --group GROUP --debug 5 --start  --foreground
+    sudo sniffjoke --location generic --user edward --group wheel --debug 5 --start  --foreground
+    
 # Link and info
 
 **The domain name delirandom.org is expired, use the same link in archive.org **
 
-SniffJoke man page: http://www.delirandom.net/sniffjoke/
-SniffJoke location requirement: http://www.delirandom.net/sniffjoke/sniffjoke-locations
-SniffJoke concepts, goals: http://www.delirandom.net/sniffjoke/sniffjoke-how-does-work
+SniffJoke man page:man sniffjoke
+SniffJoke location requirement: office,generic,etc
+SniffJoke concepts, goals: [REDACTED]..dude..domain isnt around anymore
 
 # CONFIG FILES installed in the 'generic' location
     ipblacklist.conf
@@ -109,11 +105,10 @@ and using the semi-secret options -s and -a in sniffjoke-autotest (you will avoi
 
 # Official sniffjoke page (expired domain, use archive.org)
 
-http://www.delirandom.net/sniffjoke
+[REDACTED] --> USE ARCHIVE.ORG 
 
 (old) academic researchs:
-
-http://www.delirandom.net/sniffjoke/Insertion%20Evasion%20and%20denial%20of%20service%20on%20IDS.pdf
+[REDACTED]
 
 Hacker's old bread:
 
@@ -131,6 +126,7 @@ http://www.mail-archive.com/wireshark-dev@wireshark.org/msg13465.html
 http://www.youtube.com/watch?v=y2pZ8C7ODSs Uochi Toki - Il ladro
 http://www.youtube.com/watch?v=T1-3q-vFsBY Uochi Toki - L'estetica
 
+# IDK about following the next method..something wrong with keys
 # GPG public keys
     X-2:~ X$ gpg --keyserver pgp.mit.edu --recv-key C6765430
     X-2:~ X$ gpg --fingerprint C6765430
